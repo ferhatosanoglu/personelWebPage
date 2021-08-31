@@ -1,0 +1,36 @@
+.blog-card{
+    margin: 0 auto;
+    border-bottom: none;
+    padding: 28px 24px 32px;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    &:hover{
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.2),0 4px 8px rgba(0,0,0,.15);
+        padding: 32px 24px 36px;
+    }
+}
+a{
+    text-decoration: none;
+    color: rgba(0,0,0,.77);
+    transition: color .2s ease;
+    &:hover{
+        color: #999;
+    }
+}
+time{
+    color: #999;
+    font-size: var(--post--date--small);
+    letter-spacing: var(--text-spacing-tight);
+    &:hover{
+
+    }
+}
+.blog-title{
+    font-family: var(--font-family-bold);
+    font-weight: 700;
+    line-height: 1.3333;
+    text-decoration: none;
+    margin-top: 6px;
+}

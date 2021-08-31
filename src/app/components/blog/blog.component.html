@@ -1,0 +1,8 @@
+<div class="mt-5">
+    <div class="blog-card" *ngFor="let blog of blogs.items">
+        <a href="{{blog.link}}">
+            <time datetime="">{{blog.pubDate}}</time>
+            <h2 class="blog-title">{{blog.title}}</h2>
+        </a>
+    </div>
+</div>
