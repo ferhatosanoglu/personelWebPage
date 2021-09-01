@@ -12,6 +12,7 @@ import {
   HomepageComponent,
   AboutComponent
 } from './pages';
+import { ClientFooterComponent } from './components/layouts/client/client-footer/client-footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {
     ClientHeaderComponent,
     HomepageComponent,
     BlogComponent,
-    AboutComponent
+    AboutComponent,
+    ClientFooterComponent
   ],
   imports: [
     BrowserModule,
