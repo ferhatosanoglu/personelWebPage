@@ -5,12 +5,13 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import {
   ClientLayoutComponent,
-  ClientHeaderComponent
+  ClientHeaderComponent,
+  BlogComponent
 } from './components';
 import {
-  HomepageComponent
+  HomepageComponent,
+  AboutComponent
 } from './pages';
-import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BlogComponent } from './components/blog/blog.component';
     ClientLayoutComponent,
     ClientHeaderComponent,
     HomepageComponent,
-    BlogComponent
+    BlogComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

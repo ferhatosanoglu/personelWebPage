@@ -1,13 +1,13 @@
 <nav class="navbar navbar-light header">
     <div class="container">
-        <a class="navbar-brand text-white">
-            <span class="fs-1">Ferhat Osanoglu</span>
+        <a class="navbar-brand text-white" [routerLink]="['']">
+            <span class="fs-1">Ferhat Osanoğlu</span>
             <span class="text-danger fs-1"> / </span>
             <span class=" fs-2 text-secondary">{{'Software Engineer'}}</span>
         </a>
         <div class="d-flex w-auto">
-            <!-- <span class="fs-3 mr-5"><a class="text-white mr-5" href="">{{'Writing'}} </a> </span>&nbsp; &nbsp;
-            <span class="fs-3 ml-5"> <a class="text-white" href=""> {{'About'}} </a> </span> -->
+            <p class="fs-3 m-2"><a class="text-white" [routerLink]="['']">{{' Archive '}}</a></p>
+            <p class="fs-3 m-2"> <a class="text-white" [routerLink]="['about']"> {{' About '}} </a></p>
         </div>
     </div>
 </nav>

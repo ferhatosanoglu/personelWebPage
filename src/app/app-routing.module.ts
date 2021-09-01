@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientLayoutComponent } from './components';
-import { HomepageComponent } from './pages'
+import { AboutComponent, HomepageComponent } from './pages'
 
 const routes: Routes = [
   {
@@ -11,7 +11,12 @@ const routes: Routes = [
       {
         path: '',
         component: HomepageComponent,
-        data: { title: 'Ana Sayfa' }
+        data: { title: 'Home Page' }
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+        data: { title: 'About' }
       }
     ]
   },

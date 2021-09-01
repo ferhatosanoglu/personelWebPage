@@ -14,7 +14,6 @@ export class BlogComponent implements OnInit {
   blogs: any;
   async ngOnInit() {
     this.blogs = await this._blogService.listAsync();
-    console.log(this.blogs)
     for (var i = 0; i < this.blogs.items.length; i++) {
       this.blogs.items[i].pubDate = this.blogs.items[i].pubDate.substr(0, 10)
     }
