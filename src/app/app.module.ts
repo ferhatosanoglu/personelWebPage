@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 import {
   ClientLayoutComponent,
   ClientHeaderComponent,
-  BlogComponent
+  BlogComponent,
+  ClientFooterComponent
 } from './components';
 import {
   HomepageComponent,
   AboutComponent
 } from './pages';
-import { ClientFooterComponent } from './components/layouts/client/client-footer/client-footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,14 @@ import { ClientFooterComponent } from './components/layouts/client/client-footer
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

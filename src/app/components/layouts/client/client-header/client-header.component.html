@@ -3,11 +3,22 @@
         <a class="navbar-brand text-white" [routerLink]="['']">
             <span class="fs-1">Ferhat Osanoğlu</span>
             <span class="text-danger fs-1"> / </span>
-            <span class=" fs-2 text-secondary">{{'Software Engineer'}}</span>
+            <span class=" fs-2 text-secondary">{{'Software Engineer' | translate}}</span>
         </a>
         <div class="d-flex w-auto">
-            <p class="fs-3 m-2"><a class="text-white" [routerLink]="['']">{{' Archive '}}</a></p>
-            <p class="fs-3 m-2"> <a class="text-white" [routerLink]="['about']"> {{' About '}} </a></p>
+            <p class="fs-3 m-2"><a class="text-white" [routerLink]="['']">{{'Archive' | translate}}</a></p>
+            <p class="fs-3 m-2"> <a class="text-white" [routerLink]="['about']"> {{'About' | translate}} </a></p>
+            <div class="dropdown m-2">
+                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                    aria-expanded="false"><img width="24" height="24"
+                        src="https://image.flaticon.com/icons/png/512/1810/1810733.png" alt="">
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" (click)="setLang('tr')">Tr</a></li>
+                    <li><a class="dropdown-item" (click)="setLang('en')">En</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

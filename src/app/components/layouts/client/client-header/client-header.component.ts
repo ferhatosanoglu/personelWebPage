@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/utils';
 
 @Component({
   selector: 'app-client-header',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientHeaderComponent implements OnInit {
 
-  constructor() { }
-  fakeArray = new Array(70);
-  ngOnInit(): void {
+  constructor(
+    private _languageService: LanguageService
+  ) { }
+
+  lang: string =
+    this._languageService.getLanguage() == 'en'
+      ? 'us'
+      : this._languageService.getLanguage() || 'tr';
+
+  setLang(lang: string) {
+    this.lang = lang == 'en' ? 'us' : lang;
+    this._languageService.setLanguage(lang);
   }
+  ngOnInit(): void { };
 
 }
