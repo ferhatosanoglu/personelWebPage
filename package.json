@@ -3,12 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "start": "ng serve",
+    "build-dev": "ng build",
+    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "extract-translations": "ngx-translate-extract --input ./src --output ./src/assets/i18n/*.json --clean --sort --format namespaced-json --marker _",
-    "start": "ng run personelWebPage:serve-ssr",
-    "watch": "node dist/personelWebPage/server/main.js",
-    "build": "ng build && ng run personelWebPage:server",
-    "prerender": "ng run personelWebPage:prerender"
+    "dev:ssr": "ng run personelWebPage:serve-ssr",
+    "serve:ssr": "node dist/personelWebPage/server/main.js",
+    "build:ssr": "ng build && ng run personelWebPage:server",
+    "prerender": "ng run personelWebPage:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
