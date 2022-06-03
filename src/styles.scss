@@ -1,7 +1,17 @@
-body{
+body {
     min-height: 100vh;
-    height: 100%;  
-    margin: 0; 
+    height: 100%;
+    margin: 0;
     background-color: #f2f2f2 !important;
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#bmc-wbtn {
+    width: 40px !important;
+    height: 40px !important;
+
+    img {
+        width: 30px !important;
+        height: 30px !important;
+    }
 }

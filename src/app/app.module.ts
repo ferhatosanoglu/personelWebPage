@@ -30,7 +30,7 @@ import {
     ClientFooterComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
