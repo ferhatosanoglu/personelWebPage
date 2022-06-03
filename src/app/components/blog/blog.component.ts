@@ -14,8 +14,8 @@ export class BlogComponent implements OnInit {
   blogs: any;
   async ngOnInit() {
     this.blogs = await this._blogService.listAsync();
-    for (var i = 0; i < this.blogs.items.length; i++) {
-      this.blogs.items[i].pubDate = this.blogs.items[i].pubDate.substr(0, 10)
+    for (var i = 0; i < this.blogs?.items.length; i++) {
+      this.blogs.items[i].pubDate = this.blogs?.items[i].pubDate.substr(0, 10)
     }
   }
 }
