@@ -1,0 +1,25 @@
+.s1 {
+    max-width: 33rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    padding: 1.6rem;
+     color: var(--secondary-text-color);
+    animation: section-load .8s ease-in-out;
+}
+
+.main-container {
+    margin-top: 2.4rem;
+}
+
+h5 {
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+    font-size: calc(1rem * 1.2 * 1.4);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-xs);
+    line-height: calc(var(--line-height-base) * 1.5);
+}
